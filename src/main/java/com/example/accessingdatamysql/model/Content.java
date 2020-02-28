@@ -1,15 +1,19 @@
 package com.example.accessingdatamysql.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+@Entity(name = "content")
 public class Content {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "created_date")
+    @JsonProperty("created_date")
     private Date createdDate;
 
     @Column(name = "image")

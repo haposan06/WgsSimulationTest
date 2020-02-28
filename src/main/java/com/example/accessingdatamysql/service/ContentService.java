@@ -7,6 +7,7 @@ import java.util.List;
 
 @Service
 public interface ContentService {
-    public Long createContent(Content content);
-    public List<Content> listContent(String keyword);
+    public Content createContent(Content content);
+
+    public List<Content> listContent(String description);
 }
